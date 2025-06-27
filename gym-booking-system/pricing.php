@@ -1,0 +1,293 @@
+<?php
+require_once 'includes/functions.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - RapidFit</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="frontend/css/pricing.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts -->
+    <header class="header">
+        <a href="./index.php" class="logo"> <span>RAPID</span>FIT </a>
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <a href="./index.php">home</a>
+            <a href="./index.php#about">about</a>
+            <a href="./index.php#features">features</a>
+            <a href="#pricing">pricing</a>
+            <a href="./trainers.php">trainers</a>
+            <?php if (isLoggedIn()): ?>
+                <a href="dashboard.php">dashboard</a>
+                <a href="logout.php">logout</a>
+            <?php else: ?>
+                <a href="./login.php">Register Now</a>
+            <?php endif; ?>
+        </nav>
+    </header>
+
+    <!-- pricing section starts -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            
+            <!-- Header -->
+            <div class="pricing-header">
+                <h1 class="heading">Choose Your <span>Perfect Plan</span></h1>
+                <p>Select the membership that fits your fitness goals and lifestyle</p>
+            </div>
+
+            <!-- Pricing Toggle -->
+            <div class="pricing-toggle">
+                <span>Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Yearly <span class="save-badge">Save 20%</span></span>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="pricing-grid">
+                
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Basic</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="30" data-yearly="288">30</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Perfect for beginners starting their fitness journey</p>
+                    </div>
+                    
+                    <div class="card-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Access to gym equipment</li>
+                            <li><i class="fas fa-check"></i> Basic fitness assessment</li>
+                            <li><i class="fas fa-check"></i> Group classes (2x/week)</li>
+                            <li><i class="fas fa-check"></i> Locker room access</li>
+                            <li><i class="fas fa-check"></i> Free parking</li>
+                            <li><i class="fas fa-check"></i> Basic workout plans</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <a href="<?php echo isLoggedIn() ? 'dashboard.php' : 'login.php'; ?>" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3>Premium</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="60" data-yearly="576">60</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Advanced features for serious fitness enthusiasts</p>
+                    </div>
+                    
+                    <div class="card-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Basic</li>
+                            <li><i class="fas fa-check"></i> Unlimited group classes</li>
+                            <li><i class="fas fa-check"></i> Personal trainer (1x/month)</li>
+                            <li><i class="fas fa-check"></i> Nutrition consultation</li>
+                            <li><i class="fas fa-check"></i> Access to premium equipment</li>
+                            <li><i class="fas fa-check"></i> Guest passes (2/month)</li>
+                            <li><i class="fas fa-check"></i> Progress tracking app</li>
+                            <li><i class="fas fa-check"></i> Priority booking</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <a href="<?php echo isLoggedIn() ? 'dashboard.php' : 'login.php'; ?>" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Elite Plan -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Elite</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="100" data-yearly="960">100</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Ultimate fitness experience with personalized attention</p>
+                    </div>
+                    
+                    <div class="card-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Premium</li>
+                            <li><i class="fas fa-check"></i> Personal trainer (4x/month)</li>
+                            <li><i class="fas fa-check"></i> Custom workout programs</li>
+                            <li><i class="fas fa-check"></i> Meal planning service</li>
+                            <li><i class="fas fa-check"></i> Recovery & massage therapy</li>
+                            <li><i class="fas fa-check"></i> Unlimited guest passes</li>
+                            <li><i class="fas fa-check"></i> 24/7 gym access</li>
+                            <li><i class="fas fa-check"></i> Private training sessions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <a href="<?php echo isLoggedIn() ? 'dashboard.php' : 'login.php'; ?>" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Features -->
+            <div class="features-section">
+                <h2>All Plans Include</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h4>Free WiFi</h4>
+                        <p>Stay connected while you work out</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shower"></i>
+                        </div>
+                        <h4>Shower Facilities</h4>
+                        <p>Clean and modern shower facilities</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-towel"></i>
+                        </div>
+                        <h4>Towels Provided</h4>
+                        <p>Fresh towels available daily</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h4>Locker Storage</h4>
+                        <p>Secure lockers for your belongings</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I cancel my membership anytime?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can cancel your membership at any time with a 30-day notice. No cancellation fees apply.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Do you offer a free trial?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We offer a 7-day free trial for all new members. Experience our facilities before committing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What are your operating hours?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We're open Monday-Saturday from 6 AM to 11 PM, and Sunday from 8 AM to 10 PM. Elite members have 24/7 access.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I upgrade or downgrade my plan?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section starts -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a class="links" href="index.php">home</a>
+                <a class="links" href="index.php#about">about</a>
+                <a class="links" href="index.php#features">features</a>
+                <a class="links" href="#pricing">pricing</a>
+                <a class="links" href="trainers.php">trainers</a>
+                <a class="links" href="booking.php">appointment</a>
+            </div>
+
+            <div class="box">
+                <h3>opening hours</h3>
+                <p> monday : <i> 7:00am - 10:30pm </i> </p>
+                <p> tuesday : <i> 7:00am - 10:30pm </i> </p>
+                <p> wednesday : <i> 7:00am - 10:30pm </i> </p>
+                <p> friday : <i> 7:00am - 10:30pm </i> </p>
+                <p> saturday : <i> 7:00am - 10:30pm </i> </p>
+                <p> sunday : <i> closed </i> </p>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+                <p> <i class="fas fa-phone"></i> +111-222-3333 </p>
+                <p> <i class="fas fa-envelope"></i> rapidfit@gmail.com </p>
+                <p> <i class="fas fa-map"></i> Noida, india - 400104 </p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="#" class="fab fa-pinterest"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <form action="newsletter.php" method="POST">
+                    <input type="email" name="email" class="email" placeholder="enter your email" required>
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="frontend/script/pricing.js"></script>
+</body>
+
+</html> 

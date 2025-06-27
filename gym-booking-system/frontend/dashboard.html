@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - RapidFit</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts -->
+    <header class="header">
+        <a href="./index.html" class="logo"> <span>RAPID</span>FIT </a>
+        <div class="user-info">
+            <span class="user-name">Welcome, John Doe</span>
+            <a href="./Login.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </header>
+
+    <!-- dashboard section starts -->
+    <section class="dashboard">
+        <div class="dashboard-container">
+            
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Total Bookings</h3>
+                        <p class="stat-number">12</p>
+                        <span class="stat-change positive">+2 this week</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Hours Trained</h3>
+                        <p class="stat-number">48</p>
+                        <span class="stat-change positive">+8 this month</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Workouts</h3>
+                        <p class="stat-number">24</p>
+                        <span class="stat-change positive">+4 this month</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Achievements</h3>
+                        <p class="stat-number">8</p>
+                        <span class="stat-change positive">+1 this week</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="main-grid">
+                
+                <!-- Upcoming Bookings -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-calendar-alt"></i> Upcoming Bookings</h2>
+                        <a href="./appointment.html" class="btn-primary">Book New</a>
+                    </div>
+                    <div class="bookings-list">
+                        <div class="booking-item">
+                            <div class="booking-date">
+                                <span class="day">15</span>
+                                <span class="month">Dec</span>
+                            </div>
+                            <div class="booking-details">
+                                <h4>Morning Cardio</h4>
+                                <p><i class="fas fa-clock"></i> 6:00 AM - 8:00 AM</p>
+                                <p><i class="fas fa-user"></i> Trainer: Sarah Johnson</p>
+                            </div>
+                            <div class="booking-status active">
+                                <span>Confirmed</span>
+                            </div>
+                        </div>
+
+                        <div class="booking-item">
+                            <div class="booking-date">
+                                <span class="day">17</span>
+                                <span class="month">Dec</span>
+                            </div>
+                            <div class="booking-details">
+                                <h4>Strength Training</h4>
+                                <p><i class="fas fa-clock"></i> 4:00 PM - 6:00 PM</p>
+                                <p><i class="fas fa-user"></i> Trainer: Mike Wilson</p>
+                            </div>
+                            <div class="booking-status active">
+                                <span>Confirmed</span>
+                            </div>
+                        </div>
+
+                        <div class="booking-item">
+                            <div class="booking-date">
+                                <span class="day">20</span>
+                                <span class="month">Dec</span>
+                            </div>
+                            <div class="booking-details">
+                                <h4>Yoga Session</h4>
+                                <p><i class="fas fa-clock"></i> 7:00 PM - 9:00 PM</p>
+                                <p><i class="fas fa-user"></i> Trainer: Emma Davis</p>
+                            </div>
+                            <div class="booking-status pending">
+                                <span>Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-bolt"></i> Quick Actions</h2>
+                    </div>
+                    <div class="quick-actions">
+                        <a href="./appointment.html" class="action-btn">
+                            <i class="fas fa-plus"></i>
+                            <span>Book Session</span>
+                        </a>
+                        <a href="./trainer.html" class="action-btn">
+                            <i class="fas fa-users"></i>
+                            <span>View Trainers</span>
+                        </a>
+                        <a href="./pricing.html" class="action-btn">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Membership</span>
+                        </a>
+                        <a href="./features.html" class="action-btn">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>Programs</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-history"></i> Recent Activity</h2>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon completed">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Completed Morning Cardio</h4>
+                                <p>Great session with Sarah! Burned 450 calories.</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon booking">
+                                <i class="fas fa-calendar-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Booked Yoga Session</h4>
+                                <p>New booking confirmed for Dec 20th.</p>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon achievement">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Earned "Consistency King" Badge</h4>
+                                <p>Completed 10 workouts this month!</p>
+                                <span class="activity-time">3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Chart -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-chart-line"></i> Monthly Progress</h2>
+                    </div>
+                    <div class="progress-chart">
+                        <div class="chart-container">
+                            <canvas id="progressChart" width="400" height="200"></canvas>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color workouts"></span>
+                                <span>Workouts</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color calories"></span>
+                                <span>Calories Burned</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section starts -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a class="links" href="#home">home</a>
+                <a class="links" href="#about">about</a>
+                <a class="links" href="#features">features</a>
+                <a class="links" href="#pricing">pricing</a>
+                <a class="links" href="#trainers">trainers</a>
+                <a class="links" href="#appointment">appointment</a>
+            </div>
+
+            <div class="box">
+                <h3>opening hours</h3>
+                <p> monday : <i> 7:00am - 10:30pm </i> </p>
+                <p> tuesday : <i> 7:00am - 10:30pm </i> </p>
+                <p> wednesday : <i> 7:00am - 10:30pm </i> </p>
+                <p> friday : <i> 7:00am - 10:30pm </i> </p>
+                <p> saturday : <i> 7:00am - 10:30pm </i> </p>
+                <p> sunday : <i> closed </i> </p>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+                <p> <i class="fas fa-phone"></i> +111-222-3333 </p>
+                <p> <i class="fas fa-envelope"></i> rapidfit@gmail.com </p>
+                <p> <i class="fas fa-map"></i> Noida, india - 400104 </p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="#" class="fab fa-pinterest"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <form action="">
+                    <input type="email" name="" class="email" placeholder="enter your email" id="">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/dashboard.js"></script>
+</body>
+
+</html> 
